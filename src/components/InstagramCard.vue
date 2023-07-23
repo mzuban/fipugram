@@ -1,23 +1,28 @@
 <template>
 
-  <div class="card">
+  <div class="card text-center">
     <div class="card-header text-left">
-      Featured
+      {{ info.title }}
     </div>
-    <div class="card-body p-0">
-      <img class="card-img-top" src="https://picsum.photos/800">
-</div>
-    <div class="card-footer text-muted text-left">
-      2 days ago
+    <div class="card-body">
+      <img class="card-img-top" :src="info.url" alt="neka slika..."/>
+    </div>
+    <div class="card-footer text-left">
+      {{ info.time }}
     </div>
   </div>
-
 </template>
 
 <script>
+//JS kod
 export default {
-name: 'InstagramCard',
-props: {
-}
-}
+  props: ["info"],
+  name: 'InstagramCard',
+};
 </script>
+
+<style lang="scss">
+.card {
+    margin-bottom: 20px;
+}
+</style>
