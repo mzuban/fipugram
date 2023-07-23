@@ -1,13 +1,11 @@
 <template>
 
   <div class="card text-center">
-    <div class="card-header text-left">
-      {{ info.title }}
-    </div>
+    <div class="card-header">{{ info.description }}</div>
     <div class="card-body">
       <img class="card-img-top" :src="info.url" alt="neka slika..."/>
-    </div>
-    <div class="card-footer text-left">
+     </div>
+    <div class="card-footer text-muted">
       {{ info.time }}
     </div>
   </div>
